@@ -10,9 +10,13 @@ What are the conditions that shape those opportunities? How do our decisions col
 
 ## Reading
 
-IMF / *Finance & Development*, "[Gross Domestic Product: An Economy’s All](https://www.imf.org/external/pubs/ft/fandd/basics/14_gdp.htm)." What is one reason to care about GDP growth, and one reason GDP cannot tell us everything we want to know?
+Read these three short pieces before coming to class:
 
-Vermann, Katarina (2012) [Wait, Is Saving Good or Bad? The Paradox of Thrift](https://www.stlouisfed.org/publications/page-one-economics/2012/05/01/wait-is-saving-good-or-bad-the-paradox-of-thrift)
+1.  IMF / *Finance & Development*, "[Gross Domestic Product: An Economy’s All](https://www.imf.org/external/pubs/ft/fandd/basics/14_gdp.htm)." What is one reason to care about GDP growth, and one reason GDP cannot tell us everything we want to know?
+
+2.  Vermann, Katarina (2012) "[Wait, Is Saving Good or Bad? The Paradox of Thrift](https://www.stlouisfed.org/publications/page-one-economics/2012/05/01/wait-is-saving-good-or-bad-the-paradox-of-thrift)." How could cutting spending help one household but create difficulties if many households do it simultaneously? (Careful: this is about the short-run effect, not about the long-run impact of saving.)
+
+3.  Federal Reserve Bank of St. Louis (2025) “[The Differences between Prices and Inflation Explained](https://www.stlouisfed.org/open-vault/2025/july/differences-prices-inflation-explained).” Can inflation fall while the cost of living continues to rise? Explain without using a formula.
 
 **Microeconomics** is about individual decisions. **Macroeconomics** is about how those individual decisions lead to outcomes for all of us. **Micro** individual decisions are made with constraints and in response to incentives. **Macro** context is about how those constraints come about and how those incentives interact.
 
@@ -20,7 +24,7 @@ The Macro perspective is about feedback and interaction, which means that it is 
 
 In Macroeconomics, we focus on five core questions: What determines how well people can live and why do living standards rise? Why do some economies grow faster than others? Why is it so hard (or easy) for millions of people to find work? What drives changes in the purchasing power of my money? Can society, through its government, come up with policies to manage the economy?
 
-These are really important questions. What opportunities are available to me? What opportunities will be available to my children? How much of my job outlook depends on where and when I am looking? Will next year's raise actually let me buy more? Why does the economic situation change, and can we do something about it?
+These are really important questions. I want to know what opportunities are available to me. You want to know what opportunities will be available to your children. How much of my job outlook depends on where and when I am looking! Will next year's raise actually let me buy more? Why does the economic situation change, and can we do something about it?
 
 ## Three Graphs
 

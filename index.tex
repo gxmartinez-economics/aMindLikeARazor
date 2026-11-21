@@ -1,0 +1,552 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrreprt}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={aMindLikeARazor},
+  pdfauthor={Gabriel X. Martinez},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{aMindLikeARazor}
+\author{Gabriel X. Martinez}
+\date{2026-11-21}
+\begin{document}
+\maketitle
+
+\renewcommand*\contentsname{Table of contents}
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+
+\bookmarksetup{startatroot}
+
+\chapter*{Preface}\label{preface}
+\addcontentsline{toc}{chapter}{Preface}
+
+\markboth{Preface}{Preface}
+
+The CEO of a popular razor-making company is being interviewed by a
+famous business magazine. ``Is it hard to recruit the best minds to work
+for you?'' asks the interviewer. ``Well,'' says the CEO, ``our people
+could have worked for NASA or Ferrari. But when we tell them that they
+will be working on the interaction between living biological tissue and
+the sharpest object known to man, we have no problem getting them to
+sign up.''
+
+Economics is about the interaction between the sharpest known object --
+your razor-like intelligence, the sharpest logic, the glint of
+mathematical steel -- and the living, breathing, pulsating ordinary
+business of life. We answer questions like: what makes some countries
+rich and others poor? Why do we fall into high unemployment, and how do
+we get out of it? Why do financial crises always seem to catch us by
+surprise? Why are things so expensive and who's to blame and who's in
+charge? How does our country interact with the rest of the world? What
+determines prices and why do they change? Why does the free market work
+so well so much of the time, delivering trillions of dollars of goods
+and services without a glitch and without a massive coordinating plan?
+How do monopoly power or information failure mess up that beautiful
+thing? How do we make it work when what you do affects me? What does
+economics have to say about seemingly uneconomic subjects, like the
+family or people's work?
+
+This is an Economics book. This means that you should be ready to work
+hard, and have fun working hard. It's written so that introductory
+students can get all they need -- and if they want to learn more, the
+intermediate and advanced topics are right there. And it is written so
+that intermediate-level students can easily go back to the topics they
+(of course) learned and almost remember but just need a refresher for.
+It's written for beginning students who remember their Algebra II, for
+intermediate students who loved their Pre-Calculus, and for more
+advanced students who think better when they take derivatives and
+maximize.
+
+To learn more about Quarto books visit
+\url{https://quarto.org/docs/books}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{1} \SpecialCharTok{+} \DecValTok{1}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] 2
+\end{verbatim}
+
+\bookmarksetup{startatroot}
+
+\chapter*{Introduction}\label{introduction}
+\addcontentsline{toc}{chapter}{Introduction}
+
+\markboth{Introduction}{Introduction}
+
+This is a book created from markdown and executable code.
+
+See Knuth (1984) for additional discussion of literate programming.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{1} \SpecialCharTok{+} \DecValTok{1}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] 2
+\end{verbatim}
+
+\bookmarksetup{startatroot}
+
+\chapter{The Macroeconomic
+Perspective}\label{the-macroeconomic-perspective}
+
+You work hard, develop useful skills, and make careful financial
+decisions.~ What important things about your economic future are still
+outside your individual control? The opportunities to earn may be
+abundant or scarce. Your earnings may be able to buy all you need or
+leave you short. The economy might just not have that much to offer, or
+it might be plentiful.
+
+What are the conditions that shape those opportunities? How do our
+decisions collectively help create those conditions?
+
+\section{Reading}\label{reading}
+
+IMF / \emph{Finance \& Development},
+``\href{https://www.imf.org/external/pubs/ft/fandd/basics/14_gdp.htm}{Gross
+Domestic Product: An Economy's All}.'' What is one reason to care about
+GDP growth, and one reason GDP cannot tell us everything we want to
+know?
+
+Vermann, Katarina (2012)
+\href{https://www.stlouisfed.org/publications/page-one-economics/2012/05/01/wait-is-saving-good-or-bad-the-paradox-of-thrift}{Wait,
+Is Saving Good or Bad? The Paradox of Thrift}
+
+\textbf{Microeconomics} is about individual decisions.
+\textbf{Macroeconomics} is about how those individual decisions lead to
+outcomes for all of us. \textbf{Micro} individual decisions are made
+with constraints and in response to incentives. \textbf{Macro} context
+is about how those constraints come about and how those incentives
+interact.
+
+The Macro perspective is about feedback and interaction, which means
+that it is about the big picture. Your spending is my income. If we all
+make the same (perfectly rational) individual decision, the result might
+be bad for all of us.
+
+In Macroeconomics, we focus on five core questions: What determines how
+well people can live and why do living standards rise? Why do some
+economies grow faster than others? Why is it so hard (or easy) for
+millions of people to find work? What drives changes in the purchasing
+power of my money? Can society, through its government, come up with
+policies to manage the economy?
+
+These are really important questions. What opportunities are available
+to me? What opportunities will be available to my children? How much of
+my job outlook depends on where and when I am looking? Will next year's
+raise actually let me buy more? Why does the economic situation change,
+and can we do something about it?
+
+\section{Three Graphs}\label{three-graphs}
+
+The blue, solid line is the actual size of the economy of the United
+States since 1947. Notice the periods when the economy shrank, but also
+notice the long-term pattern of growth around Potential Output, the
+dashed red line.
+
+\begin{figure}
+
+\centering{
+
+}
+
+\caption{\label{fig-realgdp-potgpd}}
+
+\end{figure}%
+
+How hard is it to find work? If you are looking for work, and can't find
+it, you are considered ``unemployed.'' There are many reasons for
+unemployment, some of which depend on the state of the economy (which
+explains the difference between the blue solid line and the red dashed
+line).
+
+\begin{figure}
+
+\centering{
+
+}
+
+\caption{\label{fig-unrate-nrou}}
+
+\end{figure}%
+
+How quickly are things getting more expensive? That depends on which
+``things'' we are talking about. The blue solid line shows you the
+\emph{growth rate} of the prices of everything consumers buy. The red
+dashed line is also a growth rate of prices, but excluding shocks that
+are quickly reversed.
+
+\begin{figure}
+
+\centering{
+
+}
+
+\caption{\label{fig-pcepi-pcepilfe}}
+
+\end{figure}%
+
+\section{The Habits of the
+Macroeconomist}\label{the-habits-of-the-macroeconomist}
+
+To think like a macroeconomist is to
+
+\begin{itemize}
+\item
+  \textbf{Follow Connections}. If you spend less at the local
+  restaurant, what happens to the restaurant workers' income? Everyone's
+  spending is someone else's income; people save so that others may
+  invest in new capital; pumping money into the economy increases
+  spending but also inflation.
+\item
+  \textbf{Add It Up}. If \emph{everyone} spends less, what happens to
+  everyone's income? In Micro, one person's spending doesn't change the
+  entire economy. In Macro, we \emph{aggregate}, meaning that we add up:
+  add up spending on all products, add up the incomes of workers and
+  owners, add up the production of farmers, factories, and financial
+  firms, add up everything that can be considered money.
+\item
+  \textbf{Keep It Real}. It's not about the dollars you get paid -- it's
+  about how much they can buy. It's about how living standards change,
+  how your material welfare changes. If your wages rise by 10\% but
+  prices rise by 11\%, you are no richer. If a country produces 20 times
+  more than another country but has 30 times more people, it's not more
+  prosperous.
+\item
+  \textbf{Separate the Long and Short of It}. A country is richer
+  because of a long-term trend, as its economy grew over generations.
+  But its people might have trouble finding work in any particular year
+  due to temporary fluctuations around that trend. The distinction
+  between short-run cycles and the long-run path is crucial to
+  macroeconomics.
+\item
+  \textbf{Cut it some slack.} On any given day, you may be feeling a
+  little low or very energized, operating below your potential or above
+  it -- and you always need to have some rest. An economy can operate
+  above its potential, or shot of it. If the economy is producing less
+  than its capacity, you see unemployment. Inflation typically picks up
+  if the economy is operating above capacity.
+\item
+  \textbf{Look at the forest.} ``How is the economy doing?'' is not the
+  kind of question you can ask by just looking at one number. You need
+  to look at the whole picture: GDP growth, inflation, and unemployment
+  are the three big statistics, Even an accurate aggregate can conceal
+  differences across households and communities.
+\item
+  \textbf{Explain, Test, Repeat.} It's easy to tell a simple, memorable
+  story. But the truth is often more interesting and more complex. Build
+  a real explanation of the world around you, and then test it by
+  asking, ``if my explanation is true, then what would I observe?''
+\end{itemize}
+
+\section{Interpret the Data}\label{interpret-the-data}
+
+Look back at Figure~\ref{fig-realgdp-potgpd}. Can output rise over a
+long time but fall over a shorter period?
+
+Search the internet for this answer: if unemployment is 5\%, does that
+mean that 95\% of the population is employed? Look at
+Figure~\ref{fig-unrate-nrou} for last month's unemployment rate.
+
+Figure~\ref{fig-pcepi-pcepilfe} shows that between July 2022 and
+December 2024, inflation fell from more than 7\% to 2.5\%. Does this
+mean that prices returned to where they started? Hint: the definition of
+inflation is ``the growth rate of prices.''
+
+Macroeconomists love graphs. But not because they really explain
+anything. Graphs tell us what happened, but it is up to a good theory to
+explain \emph{why} and \emph{how} it happened. We need a causal
+mechanism and complementary evidence.
+
+We also love variables like ``GDP per capita,'' which is the size of the
+economy divided by the population. But we know that a single variable
+can never be a complete answer to complicated questions like ``are
+people better off?'' So we want to \textbf{measure} economic
+performance, and we want to \textbf{explain} it, but we also want to
+\textbf{evaluate} it. Never confuse ``up'' with ``good.''
+
+\section{Think About It}\label{think-about-it}
+
+Give one example of how an individually sensible decision could have a
+different effect when many people make it.
+
+Choose one dashboard measure, like GDP, unemployment, or inflation. What
+does it tell us, and what does it not tell us?''
+
+\bookmarksetup{startatroot}
+
+\chapter{Summary}\label{summary}
+
+In summary, this book has no content whatsoever.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{1} \SpecialCharTok{+} \DecValTok{1}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] 2
+\end{verbatim}
+
+\bookmarksetup{startatroot}
+
+\chapter*{References}\label{references}
+\addcontentsline{toc}{chapter}{References}
+
+\markboth{References}{References}
+
+\protect\phantomsection\label{refs}
+\begin{CSLReferences}{1}{1}
+\bibitem[\citeproctext]{ref-knuth84}
+Knuth, Donald E. 1984. {``Literate Programming.''} \emph{Comput. J.}
+(USA) 27 (2): 97--111. \url{https://doi.org/10.1093/comjnl/27.2.97}.
+
+\end{CSLReferences}
+
+
+
+
+\end{document}
