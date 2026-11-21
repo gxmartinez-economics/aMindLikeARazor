@@ -1,0 +1,13 @@
+# Preface {.unnumbered}
+
+The CEO of a popular razor-making company is being interviewed by a famous business magazine. "Is it hard to recruit the best minds to work for you?" asks the interviewer. "Well," says the CEO, "our people could have worked for NASA or Ferrari. But when we tell them that they will be working on the interaction between living biological tissue and the sharpest object known to man, we have no problem getting them to sign up."
+
+Economics is about the interaction between the sharpest known object – your razor-like intelligence, the sharpest logic, the glint of mathematical steel – and the living, breathing, pulsating ordinary business of life. We answer questions like: what makes some countries rich and others poor? Why do we fall into high unemployment, and how do we get out of it? Why do financial crises always seem to catch us by surprise? Why are things so expensive and who's to blame and who's in charge? How does our country interact with the rest of the world? What determines prices and why do they change? Why does the free market work so well so much of the time, delivering trillions of dollars of goods and services without a glitch and without a massive coordinating plan? How do monopoly power or information failure mess up that beautiful thing? How do we make it work when what you do affects me? What does economics have to say about seemingly uneconomic subjects, like the family or people's work?
+
+This is an Economics book. This means that you should be ready to work hard, and have fun working hard. It's written so that introductory students can get all they need – and if they want to learn more, the intermediate and advanced topics are right there. And it is written so that intermediate-level students can easily go back to the topics they (of course) learned and almost remember but just need a refresher for. It's written for beginning students who remember their Algebra II, for intermediate students who loved their Pre-Calculus, and for more advanced students who think better when they take derivatives and maximize.
+
+To learn more about Quarto books visit <https://quarto.org/docs/books>.
+
+```{r}
+1 + 1
+```

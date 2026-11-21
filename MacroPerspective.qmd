@@ -1,0 +1,85 @@
+---
+title: "The Macroeconomic Perspective"
+format: html
+engine: markdown
+---
+
+You work hard, develop useful skills, and make careful financial decisions.  What important things about your economic future are still outside your individual control? The opportunities to earn may be abundant or scarce. Your earnings may be able to buy all you need or leave you short. The economy might just not have that much to offer, or it might be plentiful.
+
+What are the conditions that shape those opportunities? How do our decisions collectively help create those conditions?
+
+## Reading
+
+IMF / *Finance & Development*, "[Gross Domestic Product: An Economy’s All](https://www.imf.org/external/pubs/ft/fandd/basics/14_gdp.htm)." What is one reason to care about GDP growth, and one reason GDP cannot tell us everything we want to know?
+
+Vermann, Katarina (2012) [Wait, Is Saving Good or Bad? The Paradox of Thrift](https://www.stlouisfed.org/publications/page-one-economics/2012/05/01/wait-is-saving-good-or-bad-the-paradox-of-thrift)
+
+**Microeconomics** is about individual decisions. **Macroeconomics** is about how those individual decisions lead to outcomes for all of us. **Micro** individual decisions are made with constraints and in response to incentives. **Macro** context is about how those constraints come about and how those incentives interact.
+
+The Macro perspective is about feedback and interaction, which means that it is about the big picture. Your spending is my income. If we all make the same (perfectly rational) individual decision, the result might be bad for all of us.
+
+In Macroeconomics, we focus on five core questions: What determines how well people can live and why do living standards rise? Why do some economies grow faster than others? Why is it so hard (or easy) for millions of people to find work? What drives changes in the purchasing power of my money? Can society, through its government, come up with policies to manage the economy?
+
+These are really important questions. What opportunities are available to me? What opportunities will be available to my children? How much of my job outlook depends on where and when I am looking? Will next year's raise actually let me buy more? Why does the economic situation change, and can we do something about it?
+
+## Three Graphs
+
+The blue, solid line is the actual size of the economy of the United States since 1947. Notice the periods when the economy shrank, but also notice the long-term pattern of growth around Potential Output, the dashed red line.
+
+::: {#fig-realgdp-potgpd}
+```{=html}
+<div class="embed-container"><iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=21amZ&width=670&height=475" scrolling="no" frameborder="0" style="overflow:hidden;" allowTransparency="true" loading="lazy"></iframe></div><script src="https://fred.stlouisfed.org/assets/stlrch-fred/fred-graph-react/embed.min.js" type="text/javascript"></script>
+```
+:::
+
+How hard is it to find work? If you are looking for work, and can't find it, you are considered "unemployed." There are many reasons for unemployment, some of which depend on the state of the economy (which explains the difference between the blue solid line and the red dashed line).
+
+::: {#fig-unrate-nrou}
+```{=html}
+<div class="embed-container"><iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=21anb&width=670&height=475" scrolling="no" frameborder="0" style="overflow:hidden;" allowTransparency="true" loading="lazy"></iframe></div><script src="https://fred.stlouisfed.org/assets/stlrch-fred/fred-graph-react/embed.min.js" type="text/javascript"></script>
+```
+:::
+
+How quickly are things getting more expensive? That depends on which "things" we are talking about. The blue solid line shows you the *growth rate* of the prices of everything consumers buy. The red dashed line is also a growth rate of prices, but excluding shocks that are quickly reversed.
+
+::: {#fig-pcepi-pcepilfe}
+```{=html}
+<div class="embed-container"><iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=21amM&width=670&height=475" scrolling="no" frameborder="0" style="overflow:hidden;" allowTransparency="true" loading="lazy"></iframe></div><script src="https://fred.stlouisfed.org/assets/stlrch-fred/fred-graph-react/embed.min.js" type="text/javascript"></script>
+```
+:::
+
+## The Habits of the Macroeconomist
+
+To think like a macroeconomist is to
+
+- **Follow Connections**. If you spend less at the local restaurant, what happens to the restaurant workers' income? Everyone's spending is someone else's income; people save so that others may invest in new capital; pumping money into the economy increases spending but also inflation.
+
+- **Add It Up**. If *everyone* spends less, what happens to everyone's income? In Micro, one person's spending doesn't change the entire economy. In Macro, we *aggregate*, meaning that we add up: add up spending on all products, add up the incomes of workers and owners, add up the production of farmers, factories, and financial firms, add up everything that can be considered money.
+
+- **Keep It Real**. It's not about the dollars you get paid – it's about how much they can buy. It's about how living standards change, how your material welfare changes. If your wages rise by 10% but prices rise by 11%, you are no richer. If a country produces 20 times more than another country but has 30 times more people, it's not more prosperous.
+
+- **Separate the Long and Short of It**. A country is richer because of a long-term trend, as its economy grew over generations. But its people might have trouble finding work in any particular year due to temporary fluctuations around that trend. The distinction between short-run cycles and the long-run path is crucial to macroeconomics.
+
+- **Cut it some slack.** On any given day, you may be feeling a little low or very energized, operating below your potential or above it – and you always need to have some rest. An economy can operate above its potential, or shot of it. If the economy is producing less than its capacity, you see unemployment. Inflation typically picks up if the economy is operating above capacity.
+
+- **Look at the forest.** "How is the economy doing?" is not the kind of question you can ask by just looking at one number. You need to look at the whole picture: GDP growth, inflation, and unemployment are the three big statistics, Even an accurate aggregate can conceal differences across households and communities.
+
+- **Explain, Test, Repeat.** It's easy to tell a simple, memorable story. But the truth is often more interesting and more complex. Build a real explanation of the world around you, and then test it by asking, "if my explanation is true, then what would I observe?"
+
+## Interpret the Data
+
+Look back at @fig-realgdp-potgpd. Can output rise over a long time but fall over a shorter period?
+
+Search the internet for this answer: if unemployment is 5%, does that mean that 95% of the population is employed? Look at @fig-unrate-nrou for last month's unemployment rate.
+
+@fig-pcepi-pcepilfe shows that between July 2022 and December 2024, inflation fell from more than 7% to 2.5%. Does this mean that prices returned to where they started? Hint: the definition of inflation is "the growth rate of prices."
+
+Macroeconomists love graphs. But not because they really explain anything. Graphs tell us what happened, but it is up to a good theory to explain *why* and *how* it happened. We need a causal mechanism and complementary evidence.
+
+We also love variables like "GDP per capita," which is the size of the economy divided by the population. But we know that a single variable can never be a complete answer to complicated questions like "are people better off?" So we want to **measure** economic performance, and we want to **explain** it, but we also want to **evaluate** it. Never confuse "up" with "good."
+
+## Think About It
+
+Give one example of how an individually sensible decision could have a different effect when many people make it.
+
+Choose one dashboard measure, like GDP, unemployment, or inflation. What does it tell us, and what does it not tell us?”
